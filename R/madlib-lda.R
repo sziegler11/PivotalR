@@ -80,6 +80,7 @@ madlib.lda <- function (data, docid, words, topic_num,
 
     assignments <- res_out$topic_assignment
     assignments <- lapply(assignments, arraydb.to.arrayr)
+    assignments <- lapply(assignments, c)    
 
     #####
 
